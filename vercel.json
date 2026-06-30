@@ -3,6 +3,5 @@
     "app/api/**/*.ts": {
       "maxDuration": 60
     }
-  },
-  "regions": ["hkg1"]
+  }
 }
