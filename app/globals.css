@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1e3a5f;
+  --color-primary-light: #2d5a8e;
+  --color-accent: #c0392b;
+  --color-accent-light: #e74c3c;
+  --color-gold: #b8860b;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* 文章内容样式 */
+.article-content p {
+  margin-bottom: 1em;
+  line-height: 1.85;
+  text-indent: 2em;
+}
+.article-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1.5em 0 0.5em;
+  color: var(--color-primary);
+}
+.article-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1em 0 0.5em;
+}
+
+/* 分析面板滚动 */
+.analysis-scroll {
+  scroll-behavior: smooth;
+}
