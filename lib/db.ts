@@ -1,11 +1,13 @@
 // 数据库初始化 — SQLite (better-sqlite3)
-// 零配置、本地文件、适合MVP
-
+// ponytail: Vercel 只读文件系统, 数据放 /tmp (实例内持久化, 冷启动重建)
 import Database from "better-sqlite3";
 import path from "path";
 import { existsSync, mkdirSync } from "fs";
 
-const DB_PATH = path.join(process.cwd(), "data", "xiezuoli.db");
+const isVercel = !!process.env.VERCEL;
+const DB_PATH = isVercel
+  ? "/tmp/xiezuoli.db"
+  : path.join(process.cwd(), "data", "xiezuoli.db");
 
 let db: Database.Database;
 
